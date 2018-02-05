@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <tr><b>Cosmetics Inventory : </b></tr>
+    <tr th:each="cosmotics :${cosmoticses}">
+        <p th:text ="'brand: ' +${cosmotics.brand}"> </p>
+        <p th:text ="'popularity: ' +${cosmotics.popularity}"></p>
+        <p th:text ="'quantity: ' +${cosmotics.quantity}"> </p>
+        <p th:text ="'price: ' +${cosmotics.price}"></p>
+        <p th:text ="'total: ' +${cosmotics.total}"> </p>
+
+    </tr>
+    <br /><br />
+    <tr><b>Cleaning Inventory</b></tr>
+    <tr th:each="cleaningitem :${cleaningitems}">
+        <p th:text ="'name: ' +${cleaningitem.name}"> </p>
+        <p th:text ="'strength: ' +${cleaningitem.strength}"></p>
+        <p th:text ="'quantity: ' +${cleaningitem.quantity}"> </p>
+        <p th:text ="'price: ' +${cleaningitem.price}"></p>
+        <p th:text ="'total: ' +${cleaningitem.total}"> </p>
+    </tr>
+    <br /><br />
+    <tr><b>Snack Inventory</b></tr>
+    <tr th:each="snack :${snacks}">
+        <p th:text ="'name: ' +${snack.name}"> </p>
+        <p th:text ="'crunchiness: ' +${snack.crunchiness}"></p>
+        <p th:text ="'quantity: ' +${snack.quantity}"> </p>
+        <p th:text ="'price: ' +${snack.price}"></p>
+        <p th:text ="'total: ' +${snack.total}"> </p>
+
+        <br /><br />
+
+    <br /><br />
+    </tr>
+
+    <tr><b>Total Revenue: </b>
+    <p th:text="'Total Revenue: ' +${totalRevenue}"></p>
+    </tr>
+
+
+</table>
+
+</body>
+</html>
